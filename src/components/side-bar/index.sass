@@ -1,0 +1,60 @@
+#sidebar
+  height: 100vh
+  width: 270px
+  position: fixed
+  overflow: auto
+  transition: .9s
+  .sidebar__close-btn
+    padding: 10px 19px
+    color: #006156
+    display: none
+    justify-content: flex-end
+    font-family: "Gilroy", sans-serif
+    align-items: center
+    .times
+      font-size: 25px
+      font-weight: 900
+      cursor: pointer
+    @media only screen and (max-width: 1260px)
+      display: flex
+  &::after
+    content: ''
+    height: calc(100vh - 48px)
+    position: absolute
+    top: 24px
+    right: 0
+    width: 1px
+    background: #EFF2F7
+  #logo-wrapper
+    padding:
+      top: 50px
+      left: 49px
+  #help-center
+    position: absolute
+    bottom: 0
+  #links
+    display: flex
+    flex-direction: column
+    margin-top: 100px
+    width: calc(100% - 25px)
+    min-width: 190px
+  @media only screen and (max-height: 571px)
+    #help-center
+      position: relative
+  @media only screen and (max-width: 1260px)
+    opacity: 0
+    left: -300px
+    top: 0
+    &::after
+      display: none
+    #links
+      margin-top: 45px
+    &.show-sidebar
+      transition: .9s
+      left: 0
+      opacity: 1
+      z-index: 99
+      background: #fff
+      & + .overlay
+        opacity: 1
+        display: block

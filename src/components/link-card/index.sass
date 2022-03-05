@@ -1,0 +1,56 @@
+.link-card-link
+  color: #444854
+  text-decoration: none
+  transition: .9s
+  &:hover
+    color: #388379
+    .link-card
+      border-color: transparent
+      transition: .9s
+      box-shadow: 0 4px 36px rgba(0, 0, 0, 0.05)
+      .link-card__icon__svg
+        transition: 1.2s
+        fill: #44A798
+        left: 4px
+  .link-card
+    display: flex
+    background: #ffffff
+    border: 1px solid #F9FAFC
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    padding: 15px 32px
+    position: relative
+    border-radius: 24px !important
+    &.shadow
+      &::before
+        content: ''
+        position: absolute
+        top: 100%
+        width: calc(100% - 16px)
+        left: 8px
+        border-radius: 0 0 24px 24px
+        background: #F9FAFC
+        height: 4px
+      &::after
+        content: ''
+        position: absolute
+        top: calc(100% + 4px)
+        background: #E5E9F2
+        border-radius: 0 0 24px 24px
+        width: calc(100% - (16px * 2))
+        left: 16px
+        height: 4px
+    .link-card__icon__svg
+      fill: #C8E2DE
+      position: relative
+      transition: 1.2s
+    .link-card__text
+      display: flex
+      align-items: center
+      p
+        font:
+          family: "Gilroy-Medium", sans-serif
+          size: 16px
+        line-height: 28px
+        margin-left: 19px

@@ -1,0 +1,44 @@
+.recent-activity
+  &:hover
+    cursor: pointer
+    td
+      & > div
+        box-shadow: 0 4px 36px rgba(0, 0, 0, 0.05)
+    .recent-activity__amount
+      color: #575A65
+    .recent-activity__date
+      color: #9DA8B6
+  .recent-activity__status-td
+    text-align: right
+  td
+    height: 1px
+    min-height: 1px
+    padding: 8px 0
+    & > div
+      padding: 4px 0
+      display: flex
+      align-items: center
+      height: 100%
+    &:first-of-type
+      width: 42px
+      padding-right: 22px
+  .recent-activity__description
+    color: #575A65
+    font:
+      family: "Gilroy-Bold"
+      size: 14px
+    line-height: 24px
+  .recent-activity__amount
+    @extend .recent-activity__description
+    color: #9DA8B6
+  .recent-activity__date
+    @extend .recent-activity__amount
+  .recent-activity__status
+    @extend .recent-activity__amount
+    &.success
+      color: #44A798
+    &.failed
+      color: #CC4945
+    &.pending
+      color: #FFCE00
+

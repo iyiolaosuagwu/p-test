@@ -1,0 +1,29 @@
+
+.flex
+  display: flex
+  // gap: 24px
+  & > *
+    margin: 
+      left: 12px
+      right: 12px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+.column
+  display: flex
+  flex-direction: column
+  width: 100%
+  // gap: 24px
+  & > *
+    margin: 
+      top: 12px
+      bottom: 12px
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+@for $i from 1 through 12
+  .flex-size-#{$i}
+    width: calc((#{$i} / 12) * 100%)

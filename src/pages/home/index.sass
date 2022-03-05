@@ -1,0 +1,27 @@
+.content
+  display: flex
+
+.card-tabs
+  display: flex
+  width: 100%
+  & > *
+    flex: 1
+  .card-tabs__tab
+    text-align: center
+    font:
+      family: "Gilroy-Medium", sans-serif
+      size: 18px
+    line-height: 30px
+    color: #9DA8B6
+    padding: 26px 0
+    background: #EFF2F7
+    cursor: pointer
+    &:first-child
+      border:
+        radius: 24px 0 0 0
+    &:last-child
+      border:
+        radius: 0 24px 0 0
+    &.selected
+      color: #006156
+      background: #ffffff

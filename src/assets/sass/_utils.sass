@@ -1,0 +1,24 @@
+@for $i from 1 through 20
+  $val: calc(8px * #{$i})
+  .mb8-#{$i}
+    margin-bottom: $val
+  .mt8-#{$i}
+    margin-top: $val
+  .ml8-#{$i}
+    margin-left: $val
+  .mr8-#{$i}
+    margin-right: $val
+  .mx8-#{$i}
+    margin:
+      right: $val
+      left: $val
+  .my8-#{$i}
+    margin:
+      top: $val
+      bottom: $val
+  .m8-#{$i}
+    margin: $val
+
+.centered
+  display: flex
+  justify-content: center

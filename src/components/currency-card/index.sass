@@ -1,0 +1,107 @@
+.currency-card
+  border-radius: 24px
+  width: 100%
+  background: #006156
+  padding: 16px 40px
+  background:
+    image: url("../../assets/img/misc/currency_card_background.svg")
+    repeat: no-repeat
+  display: flex
+  .currency-card__chart-section__wrapper
+    display: flex
+    flex: 1
+  .currency-card__inflow-outflow
+    margin-left: 21px
+    display: flex
+    align-items: center
+    width: auto !important
+    .currency-card__inflow-outflow__container
+      display: flex
+      flex-direction: column
+      width: 100%
+      // gap: 16px
+      & > *
+        margin:
+          top: 8px
+          bottom: 8px
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-bottom: 0
+    .currency-card__inflow-outflow-title
+    font:
+      family: "Gilroy-Medium"
+      size: 12px
+    line-height: 20px
+    color: #63BDAF
+    .currency-card__inflow-outflow-value
+      font:
+        family: "Gilroy-Bold"
+        size: 12px
+      line-height: 20px
+      color: #C8E2DE
+  .currency-card__chart-section
+    flex: 1
+    margin-left: 32px
+    overflow: auto
+    .currency-card__chart__section__range
+      display: flex
+      width: 100%
+      justify-content: space-between
+      font:
+        family: "Graphik-Regular", sans-serif
+        size: 12px
+      color: #44A798
+      p
+        padding: 2px 8px
+        cursor: pointer
+        &:hover, &.selected
+          color: #fff
+          background: #63BDAF
+          border-radius: 90000px
+  .currency-card__balance-section
+    display: flex
+    align-items: center
+    position: relative
+    &::after
+      content: ''
+      background: #388379
+      width: 1px
+      height: calc(100% - 48px)
+      position: absolute
+      top: 24px
+      right: -24px
+    .currency-card__sub-text
+      color: #63BDAF
+      font:
+        family: "Gilroy-SemiBold"
+        size: 14px
+      line-height: 24px
+      margin-bottom: 8px
+    .currency-card__balance
+      color: white
+    .currency-card__book-balance
+      @extend .currency-card__sub-text
+      color: #C8E2DE
+      margin-top: 0
+  @media only screen and (max-width: 1034px) and (min-width: 785px)
+    flex-direction: column
+    .currency-card__chart-section
+      margin-left: 0
+    .currency-card__balance-section
+      margin: 32px 0
+      &::after
+        display: none
+  @media only screen and (max-width: 600px)
+    flex-direction: column
+    .currency-card__chart-section
+      margin-left: 0
+    .currency-card__balance-section
+      margin: 32px 0
+      &::after
+        display: none
+  @media only screen and (max-width: 375px)
+    .currency-card__chart-section__wrapper
+      flex-direction: column
+      .currency-card__inflow-outflow
+        margin-left: 0

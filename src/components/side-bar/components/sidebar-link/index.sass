@@ -1,0 +1,41 @@
+.sidebar-link
+  display: flex
+  align-items: center
+  padding: 16px 49px
+  border-radius: 0 12px 12px 0
+  margin:
+    top: 6px
+    bottom: 6px
+  text-decoration: none
+  color: #979AA5
+  .sidebar-link__text, .sidebar__icon, &
+    transition: .9s
+
+  &:hover
+    .sidebar-link__text
+      color: #006156
+    &:not(.help-center--no-icon-fill)
+      .sidebar__icon
+        transition: .9s
+        fill: #006156
+        *
+          fill: #006156
+
+  &.active
+    background: #FFEEA7
+    color: #006156
+    transition: .9s
+    .sidebar-link__text
+      color: #006156
+    .sidebar__icon
+      transition: .9s
+      fill: #006156
+      *
+        fill: #006156
+  .sidebar-link__text
+    margin-left: 19px
+    font:
+      family: "Gilroy-Medium", sans-serif
+      size: 14px
+    line-height: 24px
+

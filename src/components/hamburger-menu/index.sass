@@ -1,0 +1,16 @@
+#hamburger-menu
+  display: none
+  @media only screen and (max-width: 1261px)
+    display: flex
+    align-items: center
+    & > *
+      margin:
+        left: 8px
+        right: 8px
+      &:first-child
+        margin-left: 0
+      &:last-child
+        margin-right: 0
+  @media screen and (max-width: 330px)
+    img
+      height: 18px
